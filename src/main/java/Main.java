@@ -1,6 +1,4 @@
-import Controller.StartController;
-import Model.Client;
-import View.StartView;
+import Presentation.StartController;
 
 public class Main {
 

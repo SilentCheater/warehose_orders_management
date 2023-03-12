@@ -1,17 +1,24 @@
-package Controller;
+package Presentation;
 
-import DB.AbstractDAO;
-import View.JTableView;
+import BLL.ClientBLL;
+import BLL.ProductBLL;
+import Model.Product;
 
 import java.lang.reflect.Field;
 import java.util.List;
 
 public class JTableController<T> {
     JTableView jTableView;
-    AbstractDAO<T> abstractDAO;
+    ProductBLL productBLL = new ProductBLL();
+    ClientBLL clientBLL = new ClientBLL();
     public JTableController(Class<T> type){
-        abstractDAO = new AbstractDAO<>(type);
-        List<T> list = abstractDAO.findAll();
+        List<T> list;
+        if(type.isAssignableFrom(Product.class)) {
+            list = (List<T>) productBLL.findAll();
+        }
+        else {
+            list = (List<T>) clientBLL.findAll();
+        }
         Object[][] objects = new Object[list.size()][type.getDeclaredFields().length];
 
         for(int i = 0; i<list.size();i++){

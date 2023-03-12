@@ -1,8 +1,7 @@
-package Controller;
+package Presentation;
 
 import Model.Client;
 import Model.Product;
-import View.StartView;
 
 public class StartController {
     StartView startView = new StartView();

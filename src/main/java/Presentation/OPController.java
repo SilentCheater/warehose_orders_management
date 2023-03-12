@@ -1,6 +1,4 @@
-package Controller;
-
-import View.OPView;
+package Presentation;
 
 public class OPController<T> {
     OPView opView;
