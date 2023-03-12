@@ -1,0 +1,3 @@
+# Warehose orders management app
+The main objective for this project is to design and implement an order management application for the client orders for a warehouse. The user has a couples of options, for example to add, delete, edit, and view a specific client or product and even to create an order. The application will store the client, product, and order data in the database.
+Some basic information about the clients, products and the orders are stored. Not all orders will be accepted, a filter will be implemented such that orders that do not match the criteria will no be accepted. This filter consists of checking if the warehouse has at least as many products of the type of product that is being ordered.
